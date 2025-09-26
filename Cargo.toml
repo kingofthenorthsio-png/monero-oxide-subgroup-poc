@@ -1,0 +1,9 @@
+[package]
+name = "monero-oxide-subgroup-poc"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+# Pull the library directly from GitHub (crate package name is `monero-wallet`)
+monero-wallet = { git = "https://github.com/monero-oxide/monero-oxide", package = "monero-wallet" }
