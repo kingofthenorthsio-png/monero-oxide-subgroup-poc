@@ -1,9 +1,56 @@
-name: CI
+name: PoC Tests
 on: [push, pull_request]
+
+concurrency:
+  group: poc-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        toolchain: [1.79.0] # pin stable; ajoute d'autres versions si tu veux
     steps:
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
-      - run: cargo test --all-targets --verbose
+
+      - name: Install pinned Rust
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: ${{ matrix.toolchain }}
+          components: clippy
+
+      - name: Cache cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Show env
+        run: |
+          rustc --version
+          cargo --version
+          git rev-parse HEAD
+
+      - name: Clippy (deny warnings)
+        run: cargo clippy -- -D warnings
+
+      - name: Build & Test (verbose)
+        run: |
+          mkdir -p artifacts
+          cargo test --all-targets -- --nocapture 2>&1 | tee artifacts/test_log.txt
+
+      - name: Upload artifacts (logs & selected binaries)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poc-artifacts-${{ github.sha }}
+          path: |
+            artifacts/test_log.txt
+            target/debug/deps/*poc*
+            target/debug/deps/*test*
