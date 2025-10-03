@@ -1,0 +1,95 @@
+       Fresh unicode-ident v1.0.19
+       Fresh proc-macro2 v1.0.101
+       Fresh quote v1.0.40
+       Fresh version_check v0.9.5
+       Fresh syn v2.0.106
+       Fresh cfg-if v1.0.3
+       Fresh libc v0.2.176
+       Fresh typenum v1.18.0
+       Fresh getrandom v0.2.16
+       Fresh generic-array v0.14.7
+       Fresh rand_core v0.6.4
+       Fresh crypto-common v0.1.6
+       Fresh block-buffer v0.10.4
+       Fresh subtle v2.6.1
+       Fresh tap v1.0.1
+       Fresh wyz v0.5.1
+       Fresh digest v0.10.7
+       Fresh radium v0.7.0
+       Fresh zeroize_derive v1.4.2
+       Fresh funty v2.0.0
+       Fresh bitvec v1.0.1
+       Fresh zeroize v1.8.1
+       Fresh foldhash v0.2.0
+       Fresh semver v1.0.27
+       Fresh hashbrown v0.16.0
+       Fresh rustc_version v0.4.1
+       Fresh rustversion v1.0.22
+       Fresh ff v0.13.1
+       Fresh spin v0.10.0
+       Fresh group v0.13.0
+       Fresh std-shims v0.1.5
+       Fresh cpufeatures v0.2.17
+       Fresh curve25519-dalek-derive v0.1.1
+       Fresh curve25519-dalek v4.1.3
+       Fresh flexible-transcript v0.3.4
+       Fresh ciphersuite v0.4.2
+       Fresh sha2 v0.10.9
+       Fresh crypto-bigint v0.5.5
+       Fresh keccak v0.1.5
+       Fresh dalek-ff-group v0.5.0
+       Fresh sha3 v0.10.8
+       Fresh monero-io v0.1.0 (https://github.com/monero-oxide/monero-oxide#02082047)
+       Fresh monero-generators v0.4.0 (https://github.com/monero-oxide/monero-oxide#02082047)
+       Fresh monero-primitives v0.1.0 (https://github.com/monero-oxide/monero-oxide#02082047)
+       Fresh thiserror-impl v2.0.16
+       Fresh thiserror v2.0.16
+       Fresh zerocopy v0.8.27
+       Fresh autocfg v1.5.0
+       Fresh serde_core v1.0.227
+       Fresh ppv-lite86 v0.2.21
+       Fresh rand_chacha v0.3.1
+       Fresh libm v0.2.15
+       Fresh monero-bulletproofs v0.1.0 (https://github.com/monero-oxide/monero-oxide#02082047)
+       Fresh monero-clsag v0.1.0 (https://github.com/monero-oxide/monero-oxide#02082047)
+       Fresh monero-mlsag v0.1.0 (https://github.com/monero-oxide/monero-oxide#02082047)
+       Fresh monero-base58 v0.1.0 (https://github.com/monero-oxide/monero-oxide#02082047)
+       Fresh monero-borromean v0.1.0 (https://github.com/monero-oxide/monero-oxide#02082047)
+       Fresh serde_derive v1.0.227
+       Fresh hex-literal v1.0.0
+       Fresh memchr v2.7.6
+       Fresh ryu v1.0.20
+       Fresh itoa v1.0.15
+       Fresh serde v1.0.227
+       Fresh serde_json v1.0.145
+       Fresh monero-oxide v0.1.4-alpha (https://github.com/monero-oxide/monero-oxide#02082047)
+       Fresh monero-address v0.1.0 (https://github.com/monero-oxide/monero-oxide#02082047)
+       Fresh num-traits v0.2.19
+       Fresh rand v0.8.5
+       Fresh hex v0.4.3
+       Fresh rand_distr v0.4.3
+       Fresh monero-rpc v0.1.0 (https://github.com/monero-oxide/monero-oxide#02082047)
+       Fresh monero-wallet v0.1.0 (https://github.com/monero-oxide/monero-oxide#02082047)
+       Fresh monero-oxide-subgroup-poc v0.1.0 (/workspaces/monero-oxide-subgroup-poc)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.05s
+     Running `/workspaces/monero-oxide-subgroup-poc/target/debug/deps/poc-171d34e010ff6138 --nocapture`
+
+running 2 tests
+test read_point_accepts_small_order_identity ... ok
+test decompress_identity_point ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running `/workspaces/monero-oxide-subgroup-poc/target/debug/deps/poc_false_receipt-00bb9d8b1ec9827b --nocapture`
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running `/workspaces/monero-oxide-subgroup-poc/target/debug/deps/poc_scan-7dd17d0d144a340d --nocapture`
+
+running 1 test
+test extra_accepts_small_order_tx_pubkey ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
